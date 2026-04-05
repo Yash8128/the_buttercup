@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors */
+  --color-cream:       #FAF6EF;
+  --color-warm-white:  #FDF9F4;
+  --color-butter:      #E8C97A;
+  --color-caramel:     #C4853A;
+  --color-cocoa:       #2C1A0E;
+  --color-espresso:    #1A0F07;
+  --color-bark:        #5C3317;
+  --color-dusty-rose:  #E8B4A8;
+  --color-blush:       #F2D9D2;
+  --color-sage:        #A8B89A;
+  --color-border:      rgba(44, 26, 14, 0.10);
+  --color-shadow:      rgba(44, 26, 14, 0.12);
+
+  /* Spacing */
+  --space-1:    4px;
+  --space-2:    8px;
+  --space-3:    12px;
+  --space-4:    16px;
+  --space-6:    24px;
+  --space-8:    32px;
+  --space-10:   40px;
+  --space-12:   48px;
+  --space-16:   64px;
+  --space-20:   80px;
+  --space-24:   96px;
+  --space-32:   128px;
+
+  /* Elevation */
+  --shadow-xs:   0 1px 3px rgba(44, 26, 14, 0.06), 0 1px 2px rgba(44, 26, 14, 0.04);
+  --shadow-sm:   0 4px 12px rgba(44, 26, 14, 0.08);
+  --shadow-md:   0 8px 28px rgba(44, 26, 14, 0.12);
+  --shadow-lg:   0 20px 60px rgba(44, 26, 14, 0.16);
+  --shadow-card: 0 2px 16px rgba(44, 26, 14, 0.08), 0 0 0 1px rgba(44, 26, 14, 0.04);
+
+  /* Radius */
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   24px;
+}
+
+@theme inline {
+  --color-cream: var(--color-cream);
+  --color-warm-white: var(--color-warm-white);
+  --color-butter: var(--color-butter);
+  --color-caramel: var(--color-caramel);
+  --color-cocoa: var(--color-cocoa);
+  --color-espresso: var(--color-espresso);
+  --color-bark: var(--color-bark);
+  --color-dusty-rose: var(--color-dusty-rose);
+  --color-blush: var(--color-blush);
+  --color-sage: var(--color-sage);
+  --color-border: var(--color-border);
+  
+  --font-display: var(--font-cormorant);
+  --font-body: var(--font-jost);
+  --font-script: var(--font-sacramento);
+
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-card: var(--shadow-card);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+}
+
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-cocoa);
+  font-family: var(--font-body), sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), serif;
+}
+
+.script-text {
+  font-family: var(--font-script), cursive;
+}
+
