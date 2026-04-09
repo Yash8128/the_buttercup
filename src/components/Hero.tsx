@@ -57,6 +57,24 @@ export function Hero() {
           </span>
         </motion.h1>
 
+        {/* Mobile Hero Image */}
+        <motion.div
+          variants={itemVariants}
+          className="relative mb-10 h-[250px] w-[calc(100%+3rem)] -mx-6 overflow-hidden sm:w-full sm:mx-0 sm:rounded-2xl lg:hidden"
+        >
+          <img
+            src="https://static.wixstatic.com/media/0a15d0_f4f74405cad34186aa9d4c34ecbd4503~mv2.jpg"
+            alt="Artisan Cupcake"
+            className="h-full w-full object-cover"
+          />
+          {/* Floating Card Overlay - Mobile version */}
+          <div className="absolute bottom-4 left-4 flex flex-col items-center gap-1 rounded-xl bg-warm-white/90 px-3 py-2 shadow-lg backdrop-blur-sm">
+            <span className="script-text text-xl text-cocoa leading-none">Made Fresh Daily</span>
+            <div className="h-0.5 w-8 bg-butter" />
+            <span className="font-body text-[8px] uppercase tracking-widest text-caramel">Pure Artisan</span>
+          </div>
+        </motion.div>
+
         <motion.p
           variants={itemVariants}
           className="mb-10 max-w-[440px] font-body text-base font-light leading-relaxed text-bark md:text-lg"
